@@ -18,19 +18,19 @@ using System;
 
 namespace SIPSorcery.Net
 {
-    public sealed class RTPPacket
+    public class RTPPacket
     {
         public RTPHeader Header;
         public byte[] Payload;
 
         public RTPPacket()
         {
-            Header = new RTPHeader(null);
+            Header = new RTPHeader();
         }
 
         public RTPPacket(int payloadSize)
         {
-            Header = new RTPHeader(null);
+            Header = new RTPHeader();
             Payload = new byte[payloadSize];
         }
 
